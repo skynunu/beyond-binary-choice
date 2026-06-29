@@ -6,9 +6,9 @@ Unified LLM Response Extraction Script (Local Model Version)
 The model and alternative type (compromise / non_compromise) are passed as runtime arguments.
 
 Usage examples:
-    python 1_extract_llm_response_local.py --model qwen3-32b --option_type compromise
-    python 1_extract_llm_response_local.py --model llama4-scout --option_type non_compromise
-    python 1_extract_llm_response_local.py --model deepseek-r1-70b --option_type compromise --persona_type advisor --start_idx 0 --end_idx 100
+    python 1_extract_llm_alternative_response_local.py --model qwen3-32b --option_type compromise
+    python 1_extract_llm_alternative_response_local.py --model llama4-scout --option_type non_compromise
+    python 1_extract_llm_alternative_response_local.py --model deepseek-r1-70b --option_type compromise --persona_type advisor --start_idx 0 --end_idx 100
 
   vLLM mode (B200, llama4-scout / qwen3.5-122b-a10b):
     1) Start the vLLM server externally (run_b200_staged.sh handles this automatically)
@@ -230,9 +230,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Usage examples:
-  python 1_extract_llm_response_local.py --model qwen3-32b --option_type compromise
-  python 1_extract_llm_response_local.py --model llama4-scout --option_type non_compromise
-  python 1_extract_llm_response_local.py --model deepseek-r1-70b --option_type compromise --start_idx 0 --end_idx 100
+  python 1_extract_llm_alternative_response_local.py --model qwen3-32b --option_type compromise
+  python 1_extract_llm_alternative_response_local.py --model llama4-scout --option_type non_compromise
+  python 1_extract_llm_alternative_response_local.py --model deepseek-r1-70b --option_type compromise --start_idx 0 --end_idx 100
         """,
     )
 

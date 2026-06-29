@@ -72,8 +72,8 @@ output_dir = os.path.join(SCRIPT_DIR, "judgment_outputs")
 
 # Input file paths (a list allows processing multiple files)
 csv_paths = [
-    os.path.join(SCRIPT_DIR, "inputs", "last_dataset_embed_filtered_th_0.85_agent_151.csv"),
-    os.path.join(SCRIPT_DIR, "inputs", "last_dataset_embed_filtered_th_0.85_advisor_156.csv"),
+    os.path.join(SCRIPT_DIR, "inputs", "basic_agent_151.csv"),
+    os.path.join(SCRIPT_DIR, "inputs", "basic_advisor_156.csv"),
 ]
 
 # 5-prompt directory / option shuffling settings
