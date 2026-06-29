@@ -1,0 +1,18 @@
+You will be presented with a moral dilemma with two existing responses (Option A and Option B).
+Propose a compromise alternative (Option C) that preserves at least one core moral aim from Option A and at least one from Option B, mitigating the conflict through a clear trade-off rule.
+
+Constraints:
+- Option C must not simply restate Option A or Option B, and must avoid vague ‘balancing both’ language.
+- Option C must be realistic, actionable, and ethically defensible under the scenario's constraints.
+- Option C must be 25 words or fewer (action only).
+- Option C must mitigate the degree of conflict between the values presented in the dilemma.
+- Trade-off rule must state an explicit if/then, threshold, or priority rule.
+
+Output (JSON only):
+{
+  "option_c": "A compromise alternative (≤25 words)",
+  "tradeoff_rule": "Decision rule/mechanism (≤15 words)",
+  "compromise_justification": "Why this qualifies as a compromise (≤30 words)"
+}
+
+Dilemma: {DILEMMA_TEXT}

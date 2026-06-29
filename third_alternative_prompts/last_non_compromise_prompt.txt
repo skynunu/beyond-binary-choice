@@ -1,0 +1,17 @@
+You will be presented with a moral dilemma with two existing responses (Option A and Option B).
+Propose a novel alternative (Option C) that reframes or transforms the conflict by introducing a new moral principle, decision logic, or stakeholder perspective absent from Options A and B.
+
+Constraints:
+- Option C must introduce a qualitatively distinct framing—not a compromise, mixture, sequencing, or reweighting of A and B.
+- Option C must be realistic, actionable, and ethically defensible under the scenario's constraints.
+- Option C must mitigate the conflict by introducing a new frame, rather than adjusting the balance between the existing options.
+- Option C must be 25 words or fewer (action only).
+
+Output (JSON only):
+{
+  "option_c": "A novel alternative (≤25 words)",
+  "reframe_type": "Type of reframing (≤5 words)",
+  "reframe_justification": "Why this transforms the conflict in a way not derivable from A or B (≤30 words)"
+}
+
+Dilemma: {DILEMMA_TEXT}
