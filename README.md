@@ -149,3 +149,66 @@ llm_outputs_ab/{model}/
 - Existing output folders include previously generated CSVs that can be inspected without rerunning large models.
 
 This repository focuses on the alternative-generation and judgment portions of the experiments. Plotting and full paper-level statistical analysis may require additional analysis code beyond these local inference scripts.
+
+## Dataset Sources, Attribution, and License
+
+MoralAltDataset is a derived dataset. It combines source moral dilemmas and narrative materials from prior datasets with project-specific transformations, generated alternatives, and judgment annotations collected or produced for this paper.
+
+### Source datasets
+
+| Subset in this repository | Source dataset | Original license | How it is used here | Main modifications |
+|---|---|---|---|---|
+| **Agent** dilemmas | **AIRiskDilemmas / LitmusValues** | **CC BY 4.0** | Used as the source for AI-facing A/B moral dilemmas. Source: https://huggingface.co/datasets/kellycyy/AIRiskDilemmas | Subset selection, reformatting, prompt-based generation of compromise and reframed alternatives, and LLM/human judgment collection. |
+| **Advisor** dilemmas | **MPST: Movie Plot Synopses with Tags** | **CC BY-SA 4.0** | Used as a source of narrative movie information for constructing Advisor dilemmas. Source: https://www.kaggle.com/datasets/cryptexcode/mpst-movie-plot-synopses-with-tags | Subset selection, transformation into Advisor-style dilemma items, reformatting, prompt-based generation of compromise and reframed alternatives, and LLM/human judgment collection. |
+
+### License for released dataset files
+
+Unless otherwise noted, the released dataset files in this repository are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**:
+
+- `MoralAlt_dataset/`
+- `inputs/`
+- `compromise_outputs/`
+- `non_compromise_outputs/`
+- `judgment_outputs/`
+- `llm_outputs_ab/`, if present
+
+We use **CC BY-SA 4.0** for the released dataset because MoralAltDataset includes adapted material derived from MPST, which is distributed under CC BY-SA 4.0. Under CC BY-SA 4.0, users may share and adapt the material, including for commercial purposes, provided that they give appropriate attribution, indicate changes, and distribute adaptations under the same license or a compatible license.
+
+Users of this dataset should attribute:
+
+1. this repository and the MoralAltDataset paper;
+2. AIRiskDilemmas / LitmusValues;
+3. MPST: Movie Plot Synopses with Tags.
+
+If users modify or redistribute this dataset or a dataset derived from it, they should indicate their changes and release the adapted dataset under **CC BY-SA 4.0** or a compatible ShareAlike license.
+
+### Code and data license separation
+
+The dataset license above applies to the released data files. Source code files, including the Python scripts in this repository, should be treated separately from the dataset license. If the repository includes a separate software license file, that license governs the code. If no separate code license is provided, users should not assume that the dataset license automatically grants an open-source software license for the code.
+
+### Source dataset citations
+
+Please also cite the original source datasets where appropriate.
+
+```bibtex
+@article{chiu2025litmusvalues,
+  title={Will AI Tell Lies to Save Sick Children? Litmus-Testing AI Values Prioritization with AIRiskDilemmas},
+  author={Chiu, Yu Ying and Wang, Zhilin and Maiya, Sharan and Choi, Yejin and Fish, Kyle and Levine, Sydney and Hubinger, Evan},
+  journal={arXiv preprint arXiv:2505.14633},
+  year={2025}
+}
+
+@inproceedings{kar-etal-2018-mpst,
+  title={{MPST}: A Corpus of Movie Plot Synopses with Tags},
+  author={Kar, Sudipta and Maharjan, Suraj and Lopez-Monroy, A. Pastor and Solorio, Thamar},
+  booktitle={Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)},
+  year={2018},
+  url={https://aclanthology.org/L18-1274/}
+}
+```
+
+### No endorsement
+
+Use of the source datasets does not imply endorsement by the original dataset authors or licensors.
+
+This repository focuses on the alternative-generation and judgment portions of the experiments. Plotting and full paper-level statistical analysis may require additional analysis code beyond these local inference scripts.
