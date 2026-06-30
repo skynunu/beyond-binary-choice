@@ -150,9 +150,6 @@ llm_outputs_ab/{model}/
 
 This repository focuses on the alternative-generation and judgment portions of the experiments. Plotting and full paper-level statistical analysis may require additional analysis code beyond these local inference scripts.
 
-## Dataset Sources, Attribution, and License
-
-MoralAltDataset is a derived dataset. It combines source moral dilemmas and narrative materials from prior datasets with project-specific transformations, generated alternatives, and judgment annotations collected or produced for this paper.
 
 ### Source datasets
 
@@ -161,20 +158,9 @@ MoralAltDataset is a derived dataset. It combines source moral dilemmas and narr
 | **Agent** dilemmas | **AIRiskDilemmas / LitmusValues** | **CC BY 4.0** | Used as the source for AI-facing A/B moral dilemmas. Source: https://huggingface.co/datasets/kellycyy/AIRiskDilemmas | Subset selection, reformatting, prompt-based generation of compromise and reframed alternatives, and LLM/human judgment collection. |
 | **Advisor** dilemmas | **MPST: Movie Plot Synopses with Tags** | **CC BY-SA 4.0** | Used as a source of narrative movie information for constructing Advisor dilemmas. Source: https://www.kaggle.com/datasets/cryptexcode/mpst-movie-plot-synopses-with-tags | Subset selection, transformation into Advisor-style dilemma items, reformatting, prompt-based generation of compromise and reframed alternatives, and LLM/human judgment collection. |
 
-### License for released dataset files
+## License
 
-Unless otherwise noted, the released dataset files in this repository are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**:
-
-- `MoralAlt_dataset/`
-- `inputs/`
-- `compromise_outputs/`
-- `non_compromise_outputs/`
-- `judgment_outputs/`
-- `llm_outputs_ab/`, if present
-
-### Code License
-
-The source code in this repository is released under the **Apache License 2.0**.
+The dataset files are released under CC BY-SA 4.0 because they include adapted material from MPST, which is licensed under CC BY-SA 4.0. The source code in this repository is released under the **Apache License 2.0**.
 
 
 ### Paper citation
